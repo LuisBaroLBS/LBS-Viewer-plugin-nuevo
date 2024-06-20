@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.percentlayout.widget.PercentRelativeLayout
+
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:percent="http://schemas.android.com/apk/res-auto"
+xmlns:tools="http://schemas.android.com/tools"
+android:id="@+id/layout_root"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+android:background="#ffffff"
+android:orientation="vertical"
+  >
+
+
+<androidx.percentlayout.widget.PercentRelativeLayout
+  android:layout_width="fill_parent"
+  android:layout_height="wrap_content"
+  android:layout_marginBottom="10dp"
+  android:orientation="horizontal"
+  android:id="@+id/relative">
+
+
+  <!-- Title-->
+  <TextView
+    android:id="@+id/tvmessagedialogtitle"
+    android:layout_width="184dp"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="10dp"
+    android:layout_marginTop="4dip"
+    android:layout_weight="0.01"
+    android:padding="8dp"
+    android:text="Nota"
+    android:textColor="#343434"
+    android:textSize="16dip"
+    android:textStyle="normal"
+    android:typeface="normal"
+     />
+
+</androidx.percentlayout.widget.PercentRelativeLayout>
+
+<!-- Underline with this bluish color -->
+
+
+  <EditText
+    android:id="@+id/e2"
+    android:layout_width="fill_parent"
+    android:layout_alignParentStart="true"
+    android:layout_below="@+id/percentRelativeLayout"
+    android:layout_marginTop="30dp"
+    android:background="@android:color/transparent"
+    android:gravity="top"
+    android:hint="Ecribir..."
+    android:inputType="textMultiLine"
+    android:padding="8dp"
+    android:paddingBottom="60dp"
+    android:singleLine="false"
+    android:textColor="#000000"
+    android:textSize="20dip"
+
+    percent:layout_heightPercent="40%" />
+
+<androidx.percentlayout.widget.PercentRelativeLayout
+  android:layout_width="fill_parent"
+  android:layout_height="wrap_content"
+  android:layout_marginBottom="10dp"
+  android:orientation="horizontal"
+  android:id="@+id/percentRelativeLayout">
+
+  <!-- Yes button -->
+
+  <!-- No Button -->
+
+</androidx.percentlayout.widget.PercentRelativeLayout>
+
+  <Button
+
+    android:id="@+id/guardar"
+    style="?android:attr/borderlessButtonStyle"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_alignParentStart="true"
+    android:layout_below="@+id/e2"
+    android:background="@android:color/background_light"
+    android:padding="8dp"
+    android:text="Guardar"
+    android:textColor="#343434"
+
+
+    android:textSize="13dip"
+    android:textStyle="normal"
+    android:typeface="normal" />
+
+  <Button
+    android:id="@+id/borrar"
+    style="?android:attr/borderlessButtonStyle"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_alignBaseline="@+id/guardar"
+    android:layout_alignBottom="@+id/guardar"
+    android:layout_toEndOf="@+id/guardar"
+    android:background="#ffffff"
+    android:padding="8dp"
+    android:text="Borrar"
+    android:textColor="#343434"
+    android:textSize="13dip"
+    android:textStyle="normal"
+    android:typeface="normal" />
+
+  <View
+    android:layout_width="fill_parent"
+    android:layout_height="2dip"
+    android:layout_alignParentStart="true"
+    android:layout_alignTop="@+id/e2"
+    android:background="#09adb9" />
+
+</androidx.percentlayout.widget.PercentRelativeLayout>

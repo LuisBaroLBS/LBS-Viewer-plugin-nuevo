@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <application android:usesCleartextTraffic="true"
+        tools:targetApi="m">
+        <activity
+            android:name=".BookViewer"
+            android:exported="false"
+            android:theme="@style/Theme.Design.NoActionBar"
+            />
+    </application>
+
+</manifest>

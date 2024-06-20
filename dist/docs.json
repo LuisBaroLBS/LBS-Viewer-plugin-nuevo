@@ -1,0 +1,63 @@
+{
+  "api": {
+    "name": "LbsViewerPlugin",
+    "slug": "lbsviewerplugin",
+    "docs": "",
+    "tags": [],
+    "methods": [
+      {
+        "name": "echo",
+        "signature": "(options: { value: string; }) => Promise<{ value: string; }>",
+        "parameters": [
+          {
+            "name": "options",
+            "docs": "",
+            "type": "{ value: string; }"
+          }
+        ],
+        "returns": "Promise<{ value: string; }>",
+        "tags": [],
+        "docs": "",
+        "complexTypes": [],
+        "slug": "echo"
+      },
+      {
+        "name": "openBook",
+        "signature": "(options: { token: string; libroId: number; directory: string; }) => Promise<{ token: string; libroId: number; directory: string; }>",
+        "parameters": [
+          {
+            "name": "options",
+            "docs": "",
+            "type": "{ token: string; libroId: number; directory: string; }"
+          }
+        ],
+        "returns": "Promise<{ token: string; libroId: number; directory: string; }>",
+        "tags": [],
+        "docs": "",
+        "complexTypes": [],
+        "slug": "openbook"
+      },
+      {
+        "name": "show",
+        "signature": "(options: { message: string; }) => Promise<{ message: string; }>",
+        "parameters": [
+          {
+            "name": "options",
+            "docs": "",
+            "type": "{ message: string; }"
+          }
+        ],
+        "returns": "Promise<{ message: string; }>",
+        "tags": [],
+        "docs": "",
+        "complexTypes": [],
+        "slug": "show"
+      }
+    ],
+    "properties": []
+  },
+  "interfaces": [],
+  "enums": [],
+  "typeAliases": [],
+  "pluginConfigs": []
+}

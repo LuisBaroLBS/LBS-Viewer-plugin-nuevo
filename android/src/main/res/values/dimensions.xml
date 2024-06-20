@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+** Dimensiones para botones, layouts etc.
+**
+-->
+<resources>
+    <!-- Small Dimensions = "Medium Dimensions * 0.75" For Example: 210*.75 = 157.5-->
+    <dimen name = "button1_width_small">157.5dip</dimen>
+    <!-- Medium Dimensions -->
+    <dimen name = "fab_medium">60dp</dimen>
+    <!-- Large Dimensions = "Medium Dimensions * 1.5" For Example: 210*1.5 = 315 -->
+    <dimen name = "fab_large">67dp</dimen>
+    <!-- XLarge Dimensions = "Medium Dimensions * 2" For Example: 210*1.5 = 420 -->
+    <dimen name = "fab_xLarge">72dp</dimen>
+</resources>
