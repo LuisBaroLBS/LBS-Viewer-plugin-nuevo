@@ -1166,6 +1166,7 @@ public class BookViewer extends AppCompatActivity {
         androidGridView.setChoiceMode(GridView.CHOICE_MODE_MULTIPLE_MODAL);
         androidGridView.setMultiChoiceModeListener(new MultiChoiceModeListener());
 
+        //cambio para git hub
         androidGridView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             public void onItemClick(AdapterView<?> parent, View v, int position, long id) {
                 String rutaimagen = new ImageAdapterGridView(BookViewer.this).getItem(position);

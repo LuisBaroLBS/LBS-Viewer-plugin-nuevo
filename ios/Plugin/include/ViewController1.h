@@ -95,9 +95,11 @@
 //@property (retain, nonatomic) CDVViewController *viewController;
 @property (strong, nonatomic) CAPBridgeViewController *CapViewController;
 //@property (strong, nonatomic,assign) NSString *productURL;
+@property (nonatomic, readwrite, copy) NSString* startPage;
+@property (nonatomic, strong) NSString *productURL;
 @property (nonatomic, readwrite,assign) NSString *App;
 @property (nonatomic, readwrite,assign) NSString *TokenLBS;
-@property (nonatomic, readwrite,assign) NSString *productURL;
+//@property (nonatomic, readwrite,assign) NSString *productURL;
 @property (nonatomic, readwrite,assign) NSString *LibroId;
 @property (nonatomic, readwrite,assign) NSString *HojaActual;
 @property (nonatomic, readwrite,assign) NSInteger TotalPaginas;

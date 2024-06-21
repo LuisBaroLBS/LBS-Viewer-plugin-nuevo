@@ -83,10 +83,11 @@
     NSString *FinalPathTemp = [_PathLibro substringWithRange:NSMakeRange(5, _PathLibro.length -5 )];
     NSString *FinalPath=[FinalPathTemp stringByAppendingPathComponent:_HojaActual];
     
-    NSLog(@"FinalPath = %@",FinalPath);
+    NSLog(@"FinalPath collectionview = %@",FinalPath);
     NSString *Imagen=[FinalPath stringByAppendingPathComponent:[_recipeImages objectAtIndex:indexPath.row]];
   
     
+    NSLog(@"image collectionview = %@",Imagen);
     recipeImageView.image = [UIImage imageWithContentsOfFile:Imagen];
    
     return cell;

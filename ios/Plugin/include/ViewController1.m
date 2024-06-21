@@ -789,8 +789,10 @@ NSNumber *isTeacherBookBtnsNativos = 0;
         NombreArchivo=[NombreArchivo stringByAppendingString:@".png"];
     
         //NSString *imagePath =self.productURL;
-        NSString *imagePath =[self.productURL stringByReplacingOccurrencesOfString:@"ionic://localhost/_app_file_"
-                                                                    withString:@"file://"];
+        NSRange range = [self.productURL rangeOfString:@"/" options:NSBackwardsSearch];
+        NSString *baseURL = [self.productURL substringToIndex:range.location];
+        baseURL = [baseURL stringByAppendingString:@"/"];
+        NSString *imagePath =[baseURL stringByReplacingOccurrencesOfString:@"capacitor://localhost/_capacitor_file_" withString:@"file://"];
         imagePath=[imagePath stringByAppendingPathComponent:@"assets"];
         imagePath=[imagePath stringByAppendingPathComponent:@"img"];
         imagePath=[imagePath stringByAppendingPathComponent:NombreArchivo];
@@ -823,14 +825,20 @@ NSNumber *isTeacherBookBtnsNativos = 0;
     NSString *NombreArchivo=[FormatoNombreArchivo stringFromDate:[NSDate date]];
     NombreArchivo=[NombreArchivo stringByAppendingString:@".png"];
     
+    NSRange range = [self.productURL rangeOfString:@"/" options:NSBackwardsSearch];
+    NSString *baseURL = [self.productURL substringToIndex:range.location];
+    baseURL = [baseURL stringByAppendingString:@"/"];
+    
+  
     //NSString *imagePath =self.productURL;
-    NSString *imagePath =[self.productURL stringByReplacingOccurrencesOfString:@"ionic://localhost/_app_file_"
-                                                                        withString:@"file://"];
+    NSString *imagePath =[baseURL stringByReplacingOccurrencesOfString:@"capacitor://localhost/_capacitor_file_" withString:@"file://"];
+
     imagePath=[imagePath stringByAppendingPathComponent:_HojaActual];
     imagePath=[imagePath stringByAppendingPathComponent:NombreArchivo];
     
     NSString *finalPath = [imagePath substringWithRange:NSMakeRange(5, imagePath.length -5 )];
     
+    NSLog(@"imagePath = %@", finalPath);
     //extracting image from the picker and saving it
     NSString *mediaType = [info objectForKey:UIImagePickerControllerMediaType];
     if ([mediaType isEqualToString:@"public.image"]){
@@ -878,7 +886,11 @@ NSNumber *isTeacherBookBtnsNativos = 0;
     GaleriaViewController *controller = [self.storyboard instantiateViewControllerWithIdentifier:@"GaleriaViewController"];
     //controller.PathLibro= _productURL;
     //NSString *newPath = [self.productURL stringByReplacingOccurrencesOfString:@"ionic://localhost/_app_file_" withString:@"file://"];
-    controller.PathLibro= [self.productURL stringByReplacingOccurrencesOfString:@"ionic://localhost/_app_file_" withString:@"file://"];;
+    
+    NSRange range = [self.productURL rangeOfString:@"/" options:NSBackwardsSearch];
+    NSString *baseURL = [self.productURL substringToIndex:range.location];
+    baseURL = [baseURL stringByAppendingString:@"/"];
+    controller.PathLibro= [baseURL stringByReplacingOccurrencesOfString:@"capacitor://localhost/_capacitor_file_" withString:@"file://"];;
     controller.HojaActual=_HojaActual;
     controller.webView=uiWebView;
     controller.databasePath=_databasePath;
@@ -1053,7 +1065,7 @@ NSNumber *isTeacherBookBtnsNativos = 0;
        // self.viewController.wwwFolderName = self.productURL;
         //self.viewController.wwwFolderName  = @"https://www.google.com";
         
-        NSLog(@"url = %@", self.productURL);
+        NSLog(@"url view did load = %@", self.productURL);
         NSLog(@"app = %@", self.App);
         NSLog(@"token = %@", self.TokenLBS);
         idTokenLBS = _TokenLBS;
@@ -1349,8 +1361,7 @@ NSNumber *isTeacherBookBtnsNativos = 0;
     WKWebView* uiWebView = (WKWebView*)self.CapViewController.webView;
     GaleriaViewController *controller = [self.storyboard instantiateViewControllerWithIdentifier:@"GaleriaViewController"];
     //controller.PathLibro= _productURL;
-    controller.PathLibro= [self.productURL stringByReplacingOccurrencesOfString:@"ionic://localhost/_app_file_"
-                                                                                                withString:@"file://"];
+    controller.PathLibro= [self.productURL stringByReplacingOccurrencesOfString:@"capacitor://localhost/_capacitor_file_" withString:@"file://"];
     controller.HojaActual=_HojaActual;
     controller.webView=uiWebView;
     controller.recipeImages=_ImagenesGaleria;
@@ -1709,8 +1720,7 @@ NSNumber *isTeacherBookBtnsNativos = 0;
         NombreArchivo=[NombreArchivo stringByAppendingString:@".png"];
         
         //NSString *imagePath =self.productURL;
-        NSString *imagePath =[self.productURL stringByReplacingOccurrencesOfString:@"ionic://localhost/_app_file_"
-                                                                                                withString:@"file://"];
+        NSString *imagePath =[self.productURL stringByReplacingOccurrencesOfString:@"capacitor://localhost/_capacitor_file_" withString:@"file://"];
         imagePath=[imagePath stringByAppendingPathComponent:@"assets"];
         imagePath=[imagePath stringByAppendingPathComponent:@"img"];
         imagePath=[imagePath stringByAppendingPathComponent:NombreArchivo];
