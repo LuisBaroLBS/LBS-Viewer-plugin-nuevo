@@ -24,7 +24,6 @@
         </activity>
       <activity android:label="Visor Imagen" android:name="com.lbs.plugins.lbsviewer.VisorImagen" />
 
-      <!-- cambio para github -->
         <provider
             android:name="androidx.core.content.FileProvider"
             android:authorities="com.LbsPlus.starter.provider"
