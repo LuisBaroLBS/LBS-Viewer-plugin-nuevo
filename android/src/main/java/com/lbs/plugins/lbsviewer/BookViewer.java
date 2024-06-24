@@ -1181,7 +1181,15 @@ public class BookViewer extends AppCompatActivity {
         btnBorrarImagen.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+
+                if (borrargaleria.isEmpty()) {
+                    Log.d("GalleryDeletion", "La lista borrargaleria está vacía. No se realizará ninguna acción.");
+                    return;
+                }
+
                 SQLiteDatabase bd = new AdminSQLiteOpenHelper(getApplicationContext(), "libros", null, 1).getWritableDatabase();
+
+
                 for (int i = 0; i < borrargaleria.size(); i++){
                     File filenew= new File(borrargaleria.get(i));
                     filenew.delete();

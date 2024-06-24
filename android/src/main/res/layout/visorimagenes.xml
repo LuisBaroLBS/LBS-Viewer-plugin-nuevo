@@ -15,10 +15,10 @@
 
 
     <ImageButton
+        android:id="@+id/FabAtras"
         android:layout_width="60dp"
         android:layout_height="60dp"
         android:background="@drawable/fabbuttontransparent"
-        android:id="@+id/FabAtras"
-        android:src="@drawable/arrow_left"/>
+        android:src="@drawable/undo" />
 
 </RelativeLayout>

@@ -1,0 +1,471 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".BookViewer">
+
+    <com.getcapacitor.CapacitorWebView
+        android:id="@+id/webView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+
+    <ImageButton
+        android:layout_margin="15dp"
+        android:layout_width="@dimen/fab_large"
+        android:layout_height="@dimen/fab_large"
+        android:background="@drawable/fabbutton"
+        android:id="@+id/FabFoto"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:visibility="gone"
+        android:rotation="90"
+        android:src="@drawable/camera"
+        tools:ignore="ContentDescription" />
+
+    <ImageButton
+        android:layout_margin="15dp"
+        android:layout_width="@dimen/fab_large"
+        android:layout_height="@dimen/fab_large"
+        android:background="@drawable/fabbutton"
+        android:id="@+id/FabSubrayar"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:visibility="gone"
+        android:rotation="90"
+        android:src="@drawable/format_underline"
+        tools:ignore="ContentDescription" />
+
+    <ImageButton
+        android:layout_margin="15dp"
+        android:layout_width="@dimen/fab_large"
+        android:layout_height="@dimen/fab_large"
+        android:background="@drawable/fabbutton"
+        android:id="@+id/FabRayar"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:visibility="gone"
+        android:rotation="90"
+        android:src="@drawable/pencil_box_outline"
+        tools:ignore="ContentDescription" />
+
+    <ImageButton
+        android:layout_margin="15dp"
+        android:layout_width="@dimen/fab_large"
+        android:layout_height="@dimen/fab_large"
+        android:background="@drawable/fabbutton"
+        android:id="@+id/FabNotas"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:visibility="gone"
+        android:rotation="90"
+        android:src="@drawable/note"
+        tools:ignore="ContentDescription" />
+
+    <ImageButton
+        android:layout_margin="15dp"
+        android:layout_width="@dimen/fab_large"
+        android:layout_height="@dimen/fab_large"
+        android:background="@drawable/fabbutton"
+        android:id="@+id/FabIndice"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:visibility="gone"
+        android:rotation="90"
+        android:src="@drawable/format_list_bulleted"
+        tools:ignore="ContentDescription" />
+
+    <ImageButton
+        android:layout_margin="15dp"
+        android:layout_width="@dimen/fab_large"
+        android:layout_height="@dimen/fab_large"
+        android:background="@drawable/fabbutton"
+        android:id="@+id/FabFavoritos"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:visibility="gone"
+        android:rotation="90"
+        android:src="@drawable/star"
+        tools:ignore="ContentDescription" />
+
+    <ImageButton
+        android:layout_margin="15dp"
+        android:layout_width="@dimen/fab_large"
+        android:layout_height="@dimen/fab_large"
+        android:background="@drawable/fabbutton"
+        android:id="@+id/FabBookmark"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:visibility="gone"
+        android:rotation="90"
+        android:src="@drawable/bookmark"
+        tools:ignore="ContentDescription" />
+
+    <ImageButton
+        android:id="@+id/FabMain"
+        android:layout_width="@dimen/fab_large"
+        android:layout_height="@dimen/fab_large"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="15dp"
+        android:background="@drawable/fabbutton"
+        android:src="@drawable/plus"
+        tools:ignore="ContentDescription,SpeakableTextPresentCheck" />
+
+
+    <ImageButton
+        android:id="@+id/FabNumeroPagina"
+        android:layout_width="@dimen/fab_large"
+        android:layout_height="@dimen/fab_large"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="15dp"
+        android:layout_marginBottom="70dp"
+        android:background="@drawable/fabbuttongrey"
+        android:contentDescription="@string/FabNumPagina"
+        tools:ignore="ContentDescription" />
+
+    <TextView
+        android:id="@+id/txtNumeroPagina"
+        android:layout_width="40dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="88dp"
+        android:layout_marginStart="26dp"
+        android:text="@string/_1"
+        android:textAlignment="center"
+        android:textColor="#FFFFFF"
+        android:textSize="18sp" />
+
+    <ImageButton
+        android:layout_marginEnd="5dp"
+        android:layout_marginBottom="265dp"
+        android:layout_width="@dimen/fab_large"
+        android:layout_height="@dimen/fab_large"
+        android:background="@drawable/fabbutton"
+        android:id="@+id/FabBorrar"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:visibility="gone"
+        android:src="@drawable/eraser"
+        tools:ignore="ContentDescription" />
+
+    <LinearLayout
+        android:visibility="gone"
+        android:id="@+id/PanelSubrayado"
+        android:gravity="center"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="horizontal">
+
+        <ImageButton
+            android:layout_width="@dimen/fab_large"
+            android:layout_height="@dimen/fab_large"
+            android:background="@drawable/fabbuttonpinkligth"
+            android:id="@+id/FabSubrayarAmarillo"
+            tools:ignore="ContentDescription" />
+
+        <ImageButton
+            android:layout_width="@dimen/fab_large"
+            android:layout_height="@dimen/fab_large"
+            android:background="@drawable/fabbuttonpinkligth"
+            android:id="@+id/FabSubrayarRosa"
+            tools:ignore="ContentDescription" />
+
+        <ImageButton
+            android:layout_width="@dimen/fab_large"
+            android:layout_height="@dimen/fab_large"
+            android:background="@drawable/fabbutton"
+            android:id="@+id/FabSubrayarAzul"
+            tools:ignore="ContentDescription" />
+    </LinearLayout>
+
+    <TableLayout
+        android:id="@+id/PanelRayado"
+        android:gravity="center"
+        android:visibility="gone"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical">
+        <TableRow android:layout_margin="0dip"
+            android:gravity="center"
+            android:id="@+id/first_row">
+            <ImageButton
+                android:layout_width="@dimen/fab_large"
+                android:layout_height="@dimen/fab_large"
+                android:background="@drawable/fabbutton"
+                android:id="@+id/FabRayarNegro"
+                tools:ignore="ContentDescription" />
+
+            <ImageButton
+                android:layout_width="@dimen/fab_large"
+                android:layout_height="@dimen/fab_large"
+                android:background="@drawable/fabbutton"
+                android:id="@+id/FabRayarRojo"
+                tools:ignore="ContentDescription" />
+
+            <ImageButton
+                android:layout_width="@dimen/fab_large"
+                android:layout_height="@dimen/fab_large"
+                android:background="@drawable/fabbutton"
+                android:id="@+id/FabRayarAmarillo"
+                tools:ignore="ContentDescription" />
+        </TableRow>
+
+        <TableRow android:layout_margin="0dip"
+            android:gravity="center"
+            android:id="@+id/second_row">
+            <ImageButton
+                android:layout_width="@dimen/fab_large"
+                android:layout_height="@dimen/fab_large"
+                android:background="@drawable/fabbutton"
+                android:id="@+id/FabRayarVerde"
+                tools:ignore="ContentDescription" />
+
+            <ImageButton
+                android:layout_width="@dimen/fab_large"
+                android:layout_height="@dimen/fab_large"
+                android:background="@drawable/fabbutton"
+                android:id="@+id/FabRayarRosa"
+                tools:ignore="ContentDescription" />
+
+            <ImageButton
+                android:layout_width="@dimen/fab_large"
+                android:layout_height="@dimen/fab_large"
+                android:background="@drawable/fabbutton"
+                android:id="@+id/FabRayarAzul"
+                tools:ignore="ContentDescription" />
+        </TableRow>
+        <TableRow android:layout_margin="0dip"
+            android:gravity="center"
+            android:id="@+id/third_row">
+            <ImageButton
+                android:layout_width="@dimen/fab_large"
+                android:layout_height="@dimen/fab_large"
+                android:background="@drawable/fabbuttonpinkligth"
+                android:id="@+id/FabRayarRosaLigero"
+                tools:ignore="ContentDescription" />
+
+            <ImageButton
+                android:layout_width="@dimen/fab_large"
+                android:layout_height="@dimen/fab_large"
+                android:background="@drawable/fabbuttongrey"
+                android:id="@+id/FabRayarGrey"
+                tools:ignore="ContentDescription" />
+
+            <ImageButton
+                android:layout_width="@dimen/fab_large"
+                android:layout_height="@dimen/fab_large"
+                android:background="@drawable/fabbuttonmarron"
+                android:id="@+id/FabRayarMarron"
+                tools:ignore="ContentDescription" />
+        </TableRow>
+    </TableLayout>
+
+
+
+
+
+    <ImageButton
+        android:layout_marginEnd="5dp"
+        android:layout_marginBottom="320dp"
+        android:layout_width="@dimen/fab_large"
+        android:layout_height="@dimen/fab_large"
+        android:background="@drawable/fabbutton"
+        android:id="@+id/FabColorSubrayado"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:visibility="gone"
+        tools:ignore="ContentDescription" />
+
+    <ImageButton
+        android:id="@+id/FabBorrarActivo"
+        android:layout_width="@dimen/fab_large"
+        android:layout_height="@dimen/fab_large"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="5dp"
+        android:layout_marginBottom="265dp"
+        android:background="@drawable/fabbutton"
+        android:src="@drawable/eraser_active"
+        android:visibility="gone"
+        tools:ignore="ContentDescription" />
+
+    <ImageButton
+        android:layout_marginEnd="5dp"
+        android:layout_marginBottom="210dp"
+        android:layout_width="@dimen/fab_large"
+        android:layout_height="@dimen/fab_large"
+        android:visibility="gone"
+        android:background="@drawable/fabbutton"
+        android:id="@+id/FabCloseSubrayar"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:src="@drawable/close"
+        tools:ignore="ContentDescription" />
+
+
+    <Button
+        android:layout_marginEnd="5dp"
+        android:layout_marginBottom="430dp"
+        android:layout_width="@dimen/fab_large"
+        android:layout_height="@dimen/fab_large"
+        android:background="@drawable/fabbutton"
+        android:id="@+id/FabTamano"
+        android:text="@string/unopuntocero"
+        android:textColor="#FFFFFF"
+        android:visibility="gone"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        />
+
+
+    <ImageButton
+        android:layout_marginEnd="5dp"
+        android:layout_marginBottom="375dp"
+        android:layout_width="@dimen/fab_large"
+        android:layout_height="@dimen/fab_large"
+        android:background="@drawable/fabbutton"
+        android:id="@+id/FabRayarColor"
+        android:visibility="gone"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        tools:ignore="ContentDescription" />
+
+    <ImageButton
+        android:visibility="gone"
+        android:layout_marginEnd="5dp"
+        android:layout_marginBottom="320dp"
+        android:layout_width="@dimen/fab_large"
+        android:layout_height="@dimen/fab_large"
+        android:background="@drawable/fabbutton"
+        android:id="@+id/FabUndo"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:src="@drawable/eraser"
+        tools:ignore="ContentDescription" />
+
+    <ImageButton
+        android:id="@+id/FabLimpiar"
+        android:layout_width="@dimen/fab_large"
+        android:layout_height="@dimen/fab_large"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="5dp"
+        android:layout_marginBottom="265dp"
+        android:background="@drawable/fabbutton"
+        android:src="@drawable/delete"
+        android:visibility="gone"
+        tools:ignore="ContentDescription" />
+
+    <ImageButton
+        android:layout_marginEnd="5dp"
+        android:layout_marginBottom="210dp"
+        android:layout_width="@dimen/fab_large"
+        android:layout_height="@dimen/fab_large"
+        android:background="@drawable/fabbutton"
+        android:id="@+id/FabCloseRayar"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:visibility="gone"
+        android:src="@drawable/close"
+        tools:ignore="ContentDescription" />
+
+    <SeekBar
+        android:id="@+id/simpleSeekBar"
+        android:layout_width="150dp"
+        android:layout_height="40dp"
+        android:layout_marginEnd="-40dp"
+        android:layout_marginBottom="350dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:rotation="270"
+        android:max="100"
+        android:min="5"
+        android:progress="10"
+        android:visibility="gone"
+        tools:ignore="UnusedAttribute" />
+
+
+
+    <ImageButton
+        android:layout_marginEnd="5dp"
+        android:layout_marginBottom="320dp"
+        android:layout_width="@dimen/fab_large"
+        android:layout_height="@dimen/fab_large"
+        android:background="@drawable/fabbutton"
+        android:id="@+id/FabTomarFoto"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:visibility="gone"
+        android:src="@drawable/camera_iris"
+        tools:ignore="ContentDescription" />
+
+    <ImageButton
+        android:layout_marginEnd="5dp"
+        android:layout_marginBottom="265dp"
+        android:layout_width="@dimen/fab_large"
+        android:layout_height="@dimen/fab_large"
+        android:background="@drawable/fabbutton"
+        android:id="@+id/FabGaleria"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:visibility="gone"
+        android:src="@drawable/camera_burst"
+        tools:ignore="ContentDescription" />
+
+    <ImageButton
+        android:layout_marginEnd="5dp"
+        android:layout_marginBottom="210dp"
+        android:layout_width="@dimen/fab_large"
+        android:layout_height="@dimen/fab_large"
+        android:background="@drawable/fabbutton"
+        android:id="@+id/FabCloseFoto"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:visibility="gone"
+        android:src="@drawable/close"
+        tools:ignore="ContentDescription" />
+
+    <ImageButton
+        android:id="@+id/FabAudioPlayer"
+        android:layout_width="@dimen/fab_large"
+        android:layout_height="@dimen/fab_large"
+        android:layout_alignBottom="@id/FabMain"
+        android:layout_centerHorizontal="true"
+        android:visibility="gone"
+
+        android:background="@drawable/fabbutton"
+        android:src="@drawable/headphones"
+        tools:ignore="ContentDescription" />
+
+    <ImageButton
+        android:id="@+id/FabPanelMaestro"
+        android:layout_width="@dimen/fab_large"
+        android:layout_height="@dimen/fab_large"
+        android:layout_alignBottom="@id/FabMain"
+        android:layout_centerHorizontal="true"
+        android:visibility="gone"
+
+        android:background="@drawable/fabbutton"
+        android:src="@drawable/arrow_up"
+        tools:ignore="ContentDescription" />
+
+
+    <ImageButton
+        android:layout_margin="15dp"
+        android:layout_width="@dimen/fab_large"
+        android:layout_height="@dimen/fab_large"
+        android:background="@drawable/fabbutton"
+        android:id="@+id/FabEjercicios"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:src="@drawable/ejercicio"
+        android:visibility="gone"
+        tools:ignore="ContentDescription" />
+
+
+</RelativeLayout>
