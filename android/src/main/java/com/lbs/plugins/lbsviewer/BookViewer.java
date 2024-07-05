@@ -530,8 +530,8 @@ public class BookViewer extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 FabRayarColor.setBackgroundResource(R.drawable.fabbuttonmarron);
-                webView.loadUrl( "Visor.handleColorRayado('orange')", null);
-                webView.loadUrl("Visor.handleTamanoLienzo('"+ fabTamano.getText().toString() +"')", null);
+                webView.evaluateJavascript( "Visor.handleColorRayado('orange')", null);
+                webView.evaluateJavascript("Visor.handleTamanoLienzo('"+ fabTamano.getText().toString() +"')", null);
                 panelRayado.setVisibility(View.GONE);
             }
         });
@@ -607,7 +607,7 @@ public class BookViewer extends AppCompatActivity {
         FabSubrayarAmarillo.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                fabColorSubrayado.setBackgroundResource(R.drawable.fabbuttonpinkligth);
+                fabColorSubrayado.setBackgroundResource(R.drawable.fabbuttonamarillo);
                 webView.evaluateJavascript("Visor.handleColorSubRayado('rgba(255, 255, 0, 0.25)')", null);
                 panelSubrayado.setVisibility(View.GONE);
             }
@@ -615,7 +615,7 @@ public class BookViewer extends AppCompatActivity {
         FabSubrayarAzul.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                fabColorSubrayado.setBackgroundResource(R.drawable.fabbuttonpinkligth);
+                fabColorSubrayado.setBackgroundResource(R.drawable.fabbuttonazul);
                 webView.loadUrl("javascript:" + "Visor.handleColorSubRayado('rgba(39, 255, 240, 0.25)')");
                 panelSubrayado.setVisibility(View.GONE);
             }
@@ -1075,7 +1075,7 @@ public class BookViewer extends AppCompatActivity {
                 Cursor fila = bd.rawQuery("SELECT * FROM FOTOS WHERE HOJA='" + BookViewer.this.HojaActual + "' and LIBROID=" + BookViewer.this.libroId, null);
                 bd.insert("FOTOS", null, BookViewer.this.PutBDFoto());
                 String js = "Visor.dibujarFoto(" + BookViewer.this.HojaActual + ")";
-                BookViewer.this.webView.evaluateJavascript(js, null);
+                BookViewer.this.webView.loadUrl("javascript:" + js );
                 //String js = "Visor.dibujarNota(" + NewActivity.this.HojaActual + ")";
                 //  bd.close();
                 fila.close();
@@ -1087,7 +1087,7 @@ public class BookViewer extends AppCompatActivity {
                 comprimirimage(newfile, imagenid, data, paginaid);
 
                 String js = "Visor.mostrarFoto(" + "'" + imagenid + "'" + "," + "'" + paginaid + "'" + ");";
-                BookViewer.this.webView.loadUrl(js, null);
+                BookViewer.this.webView.loadUrl("javascript:" + js );
             }
         }
     }
