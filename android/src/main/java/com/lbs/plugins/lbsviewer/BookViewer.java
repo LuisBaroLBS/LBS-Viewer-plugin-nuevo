@@ -137,7 +137,7 @@ public class BookViewer extends AppCompatActivity {
 
             @Override
             public void onPageFinished(WebView view, String url) {
-                Toast.makeText(BookViewer.this, "Page finished loading", Toast.LENGTH_SHORT).show();
+                //Toast.makeText(BookViewer.this, "Page finished loading", Toast.LENGTH_SHORT).show();
                 cacharTokendesdeNativo(token);
             }
 
