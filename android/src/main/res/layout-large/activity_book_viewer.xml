@@ -131,10 +131,14 @@
         android:id="@+id/txtNumeroPagina"
         android:layout_width="40dp"
         android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/FabNumeroPagina"
+        android:layout_alignTop="@+id/FabNumeroPagina"
+        android:layout_alignEnd="@+id/FabNumeroPagina"
         android:layout_alignParentBottom="true"
-        android:layout_alignParentStart="true"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="16dp"
         android:layout_marginBottom="88dp"
-        android:layout_marginStart="26dp"
         android:text="@string/_1"
         android:textAlignment="center"
         android:textColor="#FFFFFF"
@@ -245,7 +249,7 @@
             <ImageButton
                 android:layout_width="@dimen/fab_large"
                 android:layout_height="@dimen/fab_large"
-                android:background="@drawable/fabbuttonpinkligth"
+                android:background="@drawable/fabbuttonpinkmagenta"
                 android:id="@+id/FabRayarRosaLigero"
                 tools:ignore="ContentDescription" />
 
