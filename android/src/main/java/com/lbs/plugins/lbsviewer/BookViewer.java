@@ -537,21 +537,22 @@ public class BookViewer extends AppCompatActivity {
                 panelRayado.setVisibility(View.GONE);
             }
         });
-/*
+
+
         FabUndo.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                String js = "document.getElementById('BtnUndo').click()";
+                String js = "Visor.handleUndo()";
                 webView.evaluateJavascript(js, null);
             }
         });
         FabLimpiar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                String js = "document.getElementById('BtnClear').click()";
+                String js = "Visor.handleClear()";
                 webView.evaluateJavascript(js, null);
             }
-        });*/
+        });
 
 
         // Subrayar
