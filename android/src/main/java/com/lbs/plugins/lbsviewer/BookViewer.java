@@ -545,14 +545,14 @@ public class BookViewer extends AppCompatActivity {
                 String js = "Visor.handleUndo()";
                 webView.evaluateJavascript(js, null);
             }
-        });
+        });*/
         FabLimpiar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 String js = "Visor.handleClear()";
                 webView.evaluateJavascript(js, null);
             }
-        });*/
+        });
 
 
         // Subrayar
