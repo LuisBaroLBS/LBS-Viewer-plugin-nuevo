@@ -484,7 +484,7 @@ public class BookViewer extends AppCompatActivity {
         FabRayarVerde.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                FabRayarColor.setBackgroundResource(R.drawable.fabbuttontransparent);
+                FabRayarColor.setBackgroundResource(R.drawable.fabbuttongreen);
                 webView.evaluateJavascript( "Visor.handleColorRayado('green')", null);
                 webView.evaluateJavascript( "Visor.handleTamanoLienzo('"+ fabTamano.getText().toString() +"')", null);
                 panelRayado.setVisibility(View.GONE);
@@ -493,7 +493,7 @@ public class BookViewer extends AppCompatActivity {
         FabRayarRosa.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                FabRayarColor.setBackgroundResource(R.drawable.fabbuttonpinkligth);
+                FabRayarColor.setBackgroundResource(R.drawable.fabbuttonpurple);
                 webView.evaluateJavascript("Visor.handleColorRayado('purple')", null);
                 webView.evaluateJavascript("Visor.handleTamanoLienzo('"+ fabTamano.getText().toString() +"')", null);
                 panelRayado.setVisibility(View.GONE);
@@ -502,7 +502,7 @@ public class BookViewer extends AppCompatActivity {
         FabRayarAzul.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                FabRayarColor.setBackgroundResource(R.drawable.fabbuttontransparent);
+                FabRayarColor.setBackgroundResource(R.drawable.fabbuttonazul);
                 webView.evaluateJavascript( "Visor.handleColorRayado('blue')", null);
                 webView.evaluateJavascript( "Visor.handleTamanoLienzo('"+ fabTamano.getText().toString() +"')", null);
                 panelRayado.setVisibility(View.GONE);
@@ -519,8 +519,9 @@ public class BookViewer extends AppCompatActivity {
         });
         FabRayarGrey.setOnClickListener(new View.OnClickListener() {
             @Override
+            // color cafe
             public void onClick(View v) {
-                FabRayarColor.setBackgroundResource(R.drawable.fabbuttongrey);
+                FabRayarColor.setBackgroundResource(R.drawable.fabbuttonbrown);
                 webView.evaluateJavascript("Visor.handleColorRayado('brown')", null);
                 webView.evaluateJavascript("Visor.handleTamanoLienzo('"+ fabTamano.getText().toString() +"')", null);
                 panelRayado.setVisibility(View.GONE);
@@ -528,6 +529,7 @@ public class BookViewer extends AppCompatActivity {
         });
         FabRayarMarron.setOnClickListener(new View.OnClickListener() {
             @Override
+            //color naranja
             public void onClick(View v) {
                 FabRayarColor.setBackgroundResource(R.drawable.fabbuttonmarron);
                 webView.evaluateJavascript( "Visor.handleColorRayado('orange')", null);
