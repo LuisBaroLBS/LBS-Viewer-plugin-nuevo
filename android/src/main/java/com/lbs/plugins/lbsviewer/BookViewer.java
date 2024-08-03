@@ -537,7 +537,7 @@ public class BookViewer extends AppCompatActivity {
                 panelRayado.setVisibility(View.GONE);
             }
         });
-/*
+
         FabUndo.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -551,7 +551,7 @@ public class BookViewer extends AppCompatActivity {
                 String js = "document.getElementById('BtnClear').click()";
                 webView.evaluateJavascript(js, null);
             }
-        });*/
+        });
 
 
         // Subrayar
@@ -1049,7 +1049,7 @@ public class BookViewer extends AppCompatActivity {
         try {
             Intent abrircamara = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
 
-            abrircamara.putExtra(MediaStore.EXTRA_OUTPUT, FileProvider.getUriForFile(BookViewer.this,   "com.LbsPlus.starter.provider", foto));
+            abrircamara.putExtra(MediaStore.EXTRA_OUTPUT, FileProvider.getUriForFile(BookViewer.this,   "lbs.starter.provider", foto));
 
             startActivityForResult(abrircamara, CAMERA_REQUEST);
         } catch (Exception e) {
@@ -1089,7 +1089,7 @@ public class BookViewer extends AppCompatActivity {
                 comprimirimage(newfile, imagenid, data, paginaid);
 
                 String js = "Visor.mostrarFoto(" + "'" + imagenid + "'" + "," + "'" + paginaid + "'" + ");";
-                BookViewer.this.webView.loadUrl("javascript:" + js );
+                BookViewer.this.webView.evaluateJavascript( js, null );
             }
         }
     }
