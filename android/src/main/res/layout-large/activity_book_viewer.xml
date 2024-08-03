@@ -164,7 +164,7 @@
         <ImageButton
             android:layout_width="@dimen/fab_large"
             android:layout_height="@dimen/fab_large"
-            android:background="@drawable/fabbuttonpinkligth"
+            android:background="@drawable/fabbuttonamarillo"
             android:id="@+id/FabSubrayarAmarillo"
             tools:ignore="ContentDescription" />
 
@@ -178,7 +178,7 @@
         <ImageButton
             android:layout_width="@dimen/fab_large"
             android:layout_height="@dimen/fab_large"
-            android:background="@drawable/fabbutton"
+            android:background="@drawable/fabbuttonazulcyan"
             android:id="@+id/FabSubrayarAzul"
             tools:ignore="ContentDescription" />
     </LinearLayout>
@@ -196,21 +196,21 @@
             <ImageButton
                 android:layout_width="@dimen/fab_large"
                 android:layout_height="@dimen/fab_large"
-                android:background="@drawable/fabbutton"
+                android:background="@drawable/fabbuttonblack"
                 android:id="@+id/FabRayarNegro"
                 tools:ignore="ContentDescription" />
 
             <ImageButton
                 android:layout_width="@dimen/fab_large"
                 android:layout_height="@dimen/fab_large"
-                android:background="@drawable/fabbutton"
+                android:background="@drawable/fabbuttonred"
                 android:id="@+id/FabRayarRojo"
                 tools:ignore="ContentDescription" />
 
             <ImageButton
                 android:layout_width="@dimen/fab_large"
                 android:layout_height="@dimen/fab_large"
-                android:background="@drawable/fabbutton"
+                android:background="@drawable/fabbuttonamarillo"
                 android:id="@+id/FabRayarAmarillo"
                 tools:ignore="ContentDescription" />
         </TableRow>
@@ -221,21 +221,21 @@
             <ImageButton
                 android:layout_width="@dimen/fab_large"
                 android:layout_height="@dimen/fab_large"
-                android:background="@drawable/fabbutton"
+                android:background="@drawable/fabbuttongreen"
                 android:id="@+id/FabRayarVerde"
                 tools:ignore="ContentDescription" />
 
             <ImageButton
                 android:layout_width="@dimen/fab_large"
                 android:layout_height="@dimen/fab_large"
-                android:background="@drawable/fabbutton"
+                android:background="@drawable/fabbuttonpurple"
                 android:id="@+id/FabRayarRosa"
                 tools:ignore="ContentDescription" />
 
             <ImageButton
                 android:layout_width="@dimen/fab_large"
                 android:layout_height="@dimen/fab_large"
-                android:background="@drawable/fabbutton"
+                android:background="@drawable/fabbuttonazul"
                 android:id="@+id/FabRayarAzul"
                 tools:ignore="ContentDescription" />
         </TableRow>
@@ -252,7 +252,7 @@
             <ImageButton
                 android:layout_width="@dimen/fab_large"
                 android:layout_height="@dimen/fab_large"
-                android:background="@drawable/fabbuttongrey"
+                android:background="@drawable/fabbuttonbrown"
                 android:id="@+id/FabRayarGrey"
                 tools:ignore="ContentDescription" />
 
