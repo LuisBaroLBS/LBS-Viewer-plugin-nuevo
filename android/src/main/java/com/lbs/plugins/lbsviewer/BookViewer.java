@@ -537,7 +537,6 @@ public class BookViewer extends AppCompatActivity {
                 panelRayado.setVisibility(View.GONE);
             }
         });
-/*
 
         FabUndo.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -553,8 +552,7 @@ public class BookViewer extends AppCompatActivity {
                 String js = "Visor.handleClear()";
                 webView.evaluateJavascript(js, null);
             }
-        });*/
-
+        });
 
         // Subrayar
         fabSubrayar.setOnClickListener(new View.OnClickListener() {
