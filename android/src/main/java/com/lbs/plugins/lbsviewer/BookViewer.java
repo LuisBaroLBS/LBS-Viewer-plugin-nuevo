@@ -538,7 +538,7 @@ public class BookViewer extends AppCompatActivity {
             }
         });
 
-        FabUndo.setOnClickListener(new View.OnClickListener() {
+        fabUndo.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 String js = "Visor.handleUndo()";
@@ -546,7 +546,7 @@ public class BookViewer extends AppCompatActivity {
             }
         });
 
-        FabLimpiar.setOnClickListener(new View.OnClickListener() {
+        fabLimpiar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 String js = "Visor.handleClear()";
