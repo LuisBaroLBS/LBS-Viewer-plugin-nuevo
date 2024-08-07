@@ -25,10 +25,10 @@ public class JavascriptInterfaces {
         Toast.makeText(mContex, message, Toast.LENGTH_SHORT).show();
     }
 
-    @JavascriptInterface
-    public void esconderBotonesDesdeComponentes(Boolean accion) {
-        mContex.esconderBotonesDesdeComponentesFuncNativa(accion);
-    }
+    // @JavascriptInterface
+    // public void esconderBotonesDesdeComponentes(Boolean accion) {
+    //     mContex.esconderBotonesDesdeComponentesFuncNativa(accion);
+    // }
 
     @JavascriptInterface
     public void CambioHoja(String Hoja) {
@@ -215,15 +215,15 @@ public class JavascriptInterfaces {
         });
     }
 
-    // @JavascriptInterface
-    // public void esconderBotonesDesdeComponentes(boolean estado) {
-    //     mContex.runOnUiThread(new Runnable() {
-    //         @Override
-    //         public void run() {
-    //             mContex.esconderBotonesDesdeComponentesFuncNativa(estado);
-    //         }
-    //     });
-    // }
+    @JavascriptInterface
+    public void esconderBotonesDesdeComponentes(boolean estado) {
+        mContex.runOnUiThread(new Runnable() {
+            @Override
+            public void run() {
+                mContex.esconderBotonesDesdeComponentesFuncNativa(estado);
+            }
+        });
+    }
 
     @JavascriptInterface
     public void deshabilitarBotonesNativos(boolean estado) {
