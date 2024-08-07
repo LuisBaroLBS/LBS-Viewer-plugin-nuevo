@@ -268,11 +268,13 @@ ViewController *yourViewController;
         [yourViewController EliminarFoto: IdImg];
     });
 }
-- (void)deshabilitarBotonesNativos:(CDVInvokedUrlCommand *)command{
-    NSNumber *isTeacherB = [command.arguments objectAtIndex:0];
-    NSLog(@"estado: %@", isTeacherB);
-    
-    [yourViewController setIsTeacherBook:isTeacherB];
+- (void)deshabilitarBotonesNativos:(CAPPluginCall*)call{
+    dispatch_async(dispatch_get_main_queue(), ^{
+        NSNumber *isTeacherB = call.options[@"key1"];
+        NSLog(@"estado: %@", isTeacherB);
+        
+        [yourViewController setIsTeacherBook:isTeacherB];
+    });
 }
 
 @end
