@@ -215,15 +215,15 @@ public class JavascriptInterfaces {
         });
     }
 
-    @JavascriptInterface
-    public void esconderBotonesDesdeComponentes(boolean estado) {
-        mContex.runOnUiThread(new Runnable() {
-            @Override
-            public void run() {
-                mContex.esconderBotonesDesdeComponentesFuncNativa(estado);
-            }
-        });
-    }
+    // @JavascriptInterface
+    // public void esconderBotonesDesdeComponentes(boolean estado) {
+    //     mContex.runOnUiThread(new Runnable() {
+    //         @Override
+    //         public void run() {
+    //             mContex.esconderBotonesDesdeComponentesFuncNativa(estado);
+    //         }
+    //     });
+    // }
 
     @JavascriptInterface
     public void deshabilitarBotonesNativos(boolean estado) {
