@@ -268,6 +268,28 @@ ViewController *yourViewController;
         [yourViewController EliminarFoto: IdImg];
     });
 }
+- (void)openPlayer:(CAPPluginCall*)call{
+        dispatch_async(dispatch_get_main_queue(), ^{
+        //NSString* IdImg = [command.arguments objectAtIndex:0];
+        
+        [yourViewController openPlayer];
+    });
+}
+
+-  (void)abrirLink:(CAPPluginCall*)call{
+        dispatch_async(dispatch_get_main_queue(), ^{
+        NSString *link = call.options[@"link"];
+        
+        UIApplication *application = [UIApplication sharedApplication];
+        NSURL *URL = [NSURL URLWithString:link];
+        [application openURL:URL options:@{} completionHandler:^(BOOL success) {
+            if (success) {
+                NSLog(@"Opened url");
+            }
+        }];
+    });    
+}
+
 - (void)deshabilitarBotonesNativos:(CAPPluginCall*)call{
     dispatch_async(dispatch_get_main_queue(), ^{
         NSNumber *isTeacherB = call.options[@"key1"];

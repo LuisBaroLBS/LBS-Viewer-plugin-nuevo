@@ -16,6 +16,8 @@ CAP_PLUGIN(LbsViewerPlugin, "LbsViewer",
            CAP_PLUGIN_METHOD(mostrarBotonPanelMaestro,CAPPluginReturnPromise);
            CAP_PLUGIN_METHOD(TomarFoto,CAPPluginReturnPromise);
            CAP_PLUGIN_METHOD(EliminarFoto,CAPPluginReturnPromise);
+           CAP_PLUGIN_METHOD(openPlayer,CAPPluginReturnPromise);
+           CAP_PLUGIN_METHOD(abrirLink,CAPPluginReturnPromise);
            CAP_PLUGIN_METHOD(deshabilitarBotonesNativos,CAPPluginReturnPromise);
            
 )
